@@ -1,0 +1,12 @@
+- name: Change hostname
+  hosts: ubuntu
+  tasks:
+    - name: Set hostname
+      become: yes
+      hostname:
+        name: Volodymyr-Hula-lab2
+    - name: Change /etc/hostname
+      become: yes
+      lineinfile:
+        path: /etc/hostname
+        line: Volodymyr-Hula-lab2

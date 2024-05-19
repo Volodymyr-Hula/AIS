@@ -1,0 +1,16 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [Change hostname] *********************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [target_win]
+
+TASK [Set hostname] ************************************************************
+ok: [target_win] => {"ansible_facts": {"ansible_domain": "", "ansible_fqdn": "Volodymyr-Hula-lab2", "ansible_hostname": "Volodymyr-Hula-lab2", "ansible_nodename": "Volodymyr-Hula-lab2"}, "changed": false, "name": "Volodymyr-Hula-lab2"}
+
+TASK [Change /etc/hostname] ****************************************************
+ok: [target_win] => {"backup": "", "changed": false, "msg": ""}
+
+PLAY RECAP *********************************************************************
+target_win                 : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

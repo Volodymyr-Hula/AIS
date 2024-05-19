@@ -1,0 +1,5 @@
+- hosts: all
+  roles:
+    - role: dummy_role
+  vars:
+    package_name: "{{ package_name }}"
